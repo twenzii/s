@@ -1,0 +1,56 @@
+{% schema %}
+{
+  "name": "Countdown Timer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "timer_message",
+      "label": "Countdown Message",
+      "default": "FINAL HOURS OF OUR CLOSURE SALE"
+    },
+    {
+      "type": "number",
+      "id": "countdown_hours",
+      "label": "Countdown Duration (in Hours)",
+      "default": 12
+    }
+  ],
+  "presets": [{
+    "name": "Countdown Timer"
+  }]
+}
+{% endschema %}
+
+<div class="countdown-banner" style="background: black; color: white; text-align: center; padding: 10px; font-weight: bold;">
+  <span id="countdown-clock" style="margin-right: 10px;"></span>
+  <span style="color: red;">{{ section.settings.timer_message }}</span>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var countdownHours = parseInt({{ section.settings.countdown_hours | default: 12 }});
+    var countdownDate = new Date().getTime() + countdownHours * 60 * 60 * 1000;
+
+    function updateCountdown() {
+      var now = new Date().getTime();
+      var distance = countdownDate - now;
+
+      if (distance < 0) {
+        document.getElementById("countdown-clock").innerHTML = "00:00:00";
+        return;
+      }
+
+      var hours = Math.floor(distance / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown-clock").innerHTML =
+        String(hours).padStart(2, '0') + ":" +
+        String(minutes).padStart(2, '0') + ":" +
+        String(seconds).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  });
+</script>

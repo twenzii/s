@@ -1,0 +1,64 @@
+{% schema %}
+{
+  "name": "Product Sales Points",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "sales_point",
+      "name": "Sales Point",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon image"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Sales point text",
+          "default": "Free Shipping with UPS"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "Sales Points Example",
+      "blocks": [
+        {
+          "type": "sales_point",
+          "settings": {
+            "text": "Free Shipping with UPS"
+          }
+        },
+        {
+          "type": "sales_point",
+          "settings": {
+            "text": "30-Day Money-Back Guarantee"
+          }
+        },
+        {
+          "type": "sales_point",
+          "settings": {
+            "text": "Over 17,000+ Happy Customers"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="product-sales-points" style="margin-top: 20px;">
+  {% for block in section.blocks %}
+    {% if block.type == 'sales_point' %}
+      <div class="sales-point-block" style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px; text-align: left;">
+        {% if block.settings.icon %}
+          <img src="{{ block.settings.icon | img_url: '40x' }}" alt="Icon" style="width: 20px; height: 20px;" loading="lazy" />
+        {% endif %}
+        <div style="font-size: 15px;">{{ block.settings.text }}</div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
