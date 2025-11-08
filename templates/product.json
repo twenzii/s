@@ -1,1 +1,544 @@
-{"sections":{"main":{"type":"main-product","blocks":{"price":{"type":"price","settings":{}},"separator":{"type":"separator","settings":{}},"custom_UcQEpm":{"type":"custom","settings":{"code":"{%- assign badge_text = 'Sidste enheder på lager!' -%}\n\n<div class=\"usp-line usp-line--stock\">\n  <span class=\"usp-line__text\">{{ badge_text }}<\/span>\n<\/div>\n\n<style>\n  .usp-line {\n    display: flex;\n    align-items: center;\n    font-size: 1.05rem;\n    line-height: 1.3;\n    color: var(--color-foreground, #1a1a1a);\n    font-weight: 500;\n    margin: 0;                \/* geen ruimte boven of onder *\/\n    margin-left: 2px;         \/* lijn stip uit met icoontjes *\/\n  }\n\n  .usp-line--stock::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #F5A623;\n    margin-right: .55rem;\n    flex: 0 0 10px;\n    position: relative;\n    top: -1px; \/* optische correctie, precies in lijn met icoontjes *\/\n  }\n\n  .usp-line__text {\n    letter-spacing: .1px;\n  }\n<\/style>"}},"sales_point_BpRnN7":{"type":"sales_point","settings":{"icon":"truck","text":"Gratis PostNord forsendelse"}},"sales_point_tPJpCR":{"type":"sales_point","settings":{"icon":"shield","text":"30 Dages Pengene-tilbage-garanti"}},"sales_point_7HCqcT":{"type":"sales_point","settings":{"icon":"ribbon","text":"Mere end 150.000 tilfredse kunder"}},"variant_picker_pawatC":{"type":"variant_picker","settings":{"variant_labels":true,"picker_type":"button","color_swatches":false}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"surface_pickup_enable":false}},"custom_VtjdeG":{"type":"custom","settings":{"code":"{% if shop.enabled_payment_types %}\n<div class=\"payment-icons\">\n  {% for type in shop.enabled_payment_types %}\n    {{ type | payment_type_svg_tag }}\n  {% endfor %}\n<\/div>\n{% endif %}"}},"separator_7kiXVA":{"type":"separator","settings":{}},"custom_kw9ekc":{"type":"custom","disabled":true,"settings":{"code":"<div class=\"product-block selluxe-shipping-row shipping-point_JhA92F\">\n  <style>\n    .shipping-point_JhA92F {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      padding: 10px 14px;\n      border: 1px solid #ddd;\n      border-radius: 4px;\n      margin-top: 16px;\n      font-size: 14px;\n    }\n    .shipping-point_JhA92F .icon {\n      width: 24px;\n      height: 24px;\n      position: relative;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      color: #279c58;\n    }\n    .shipping-point_JhA92F .icon .dot-icon {\n      position: absolute;\n    }\n    .shipping-point_JhA92F .icon .dot-animated {\n      animation: pulse-green 2s infinite;\n    }\n    @keyframes pulse-green {\n      from {\n        transform: scale(1);\n        opacity: 1;\n      }\n      to {\n        transform: scale(2.4);\n        opacity: 0;\n      }\n    }\n  <\/style>\n\n  <!-- Left side: Icon + Shipping Text -->\n  <div style=\"display: flex; align-items: center; gap: 8px;\">\n    <div class=\"icon\">\n      <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"#279c58\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"dot-icon dot-animated\"><circle cx=\"12\" cy=\"12\" r=\"10\"><\/circle><\/svg>\n      <svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"#279c58\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"dot-icon\"><circle cx=\"12\" cy=\"12\" r=\"10\"><\/circle><\/svg>\n    <\/div>\n    <div class=\"text\">\n      <span>Ships on <strong id=\"shipping-date\"><\/strong><\/span>\n    <\/div>\n  <\/div>\n\n  <!-- Right side: Flag + Text -->\n  <div style=\"display: flex; align-items: center; gap: 6px;\">\n    <img src=\"{{ 'usa.webp' | asset_url }}\" alt=\"USA Flag\" style=\"height: 14px;\" \/>\n    <span><strong>Free Shipping<\/strong><\/span>\n  <\/div>\n<\/div>\n\n<script>\n  \/\/ Set shipping date dynamically to today\n  const dateEl = document.getElementById('shipping-date');\n  const shippingDate = new Date();\n\n  const options = { weekday: 'long', month: 'long', day: 'numeric' };\n  const formattedDate = shippingDate.toLocaleDateString('en-US', options);\n\n  dateEl.textContent = formattedDate;\n<\/script>"}},"custom_T7CQzw":{"type":"custom","settings":{"code":""}},"custom_exrMhR":{"type":"custom","disabled":true,"settings":{"code":"<div style=\"display: flex; justify-content: center;\">\n<div class=\"badgesContainer\" style=\"display: block; text-align: center;\"><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/mastercard_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/visa_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/americanexpress_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/applepay2_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/mobilepay_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/paypal_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https:\/\/trust.conversionbear.com\/..\/static\/badges\/klarna_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"><\/div><\/div>\n<\/div>"}},"custom_cXH7ee":{"type":"custom","settings":{"code":"<div class=\"bundle-offer-block\">\n  <p class=\"bundle-heading\">Tidligt Black Friday-udsalg:<\/p>\n  <ul class=\"bundle-tiers\">\n    <li><strong>Køb 2<\/strong> → Spar 10 % ekstra<\/li>\n    <li><strong>Køb 3<\/strong> → Spar 15 % ekstra<\/li>\n    <li><strong>Køb 4<\/strong> → <span>Spar 20 % ekstra<\/span><\/li>\n <li class=\"highlight-tier\"><strong>Køb 5<\/strong> → <span>Spar 25 % ekstra<\/span><\/li>\n  <\/ul>\n  <p class=\"bundle-note\">\n    <span class=\"urgent-text\">LAGERET SÆLGER HURTIGT:<\/span> MEN STADIG TILGÆNGELIGT, HVIS DU KAN LÆGGE DET I KURVEN\n  <\/p>\n<\/div>"}},"custom_wJQW4q":{"type":"custom","settings":{"code":"<div style=\"border: 1px solid #FFAAAA; padding: 10px 15px; background-color: #fee6e6; border-radius: 0px; margin-top: 20px; font-family: inherit; color: #C30000; line-height: 1.4; text-align: left;\">\n                            <p style=\"margin: 0; font-size: 16px;\">\n                              <span style=\"color: #C30000; font-weight: bold;\">Tidligt Black Friday-udsalg:<\/span> På grund af stor\nefterspørgsel under vores jubilæumssalg er der kun et begrænset antal enheder tilbage! Hvis du stadig kan\nklikke på »Tilføj til kurv«, er den stadig tilgængelig.\n                            <\/p>\n<\/div>"}},"custom_9RG8XT":{"type":"custom","disabled":true,"settings":{"code":"<div style=\"display: flex; align-items: center; gap: 16px; margin: 24px 0;\">\n  <!-- Profielfoto -->\n  <div style=\"flex-shrink: 0;\">\n    <img src=\"\/\/charleston-boutique.us\/cdn\/shop\/files\/Zonder_titel_150_x_150_px_2_78fc3a68-e153-491d-9124-5a5d4596f915.png?v=1747835322&width=150\"\n         alt=\"Profile photo\"\n         width=\"70\"\n         height=\"70\"\n         style=\"border-radius: 20%; object-fit: cover; display: block;\">\n  <\/div>\n\n  <!-- Tekstblok -->\n  <div>\n    <p style=\"margin: 0; font-size: 14px; line-height: 1.5;\">\n      Over 17,000 women across the U.S. trust Beatrice Boutique for timeless comfort and style.\n    <\/p>\n  <\/div>\n<\/div>"}},"description":{"type":"description","settings":{"is_tab":false}},"tab":{"type":"tab","settings":{"title":"100% RETURGARANTI","content":"<p>Vi tilbyder <strong>30 dages returret<\/strong>, så du kan returnere din ordre inden for 30 dage efter modtagelsen og få alle pengene tilbage.<\/p>","page":""}},"tab_UA9LWb":{"type":"tab","settings":{"title":"GRATIS LEVERING","content":"<p>Vi tilbyder gratis levering i Danmark på alle ordrer.<\/p><p>Vi sender alle pakker med en Track & Trace-kode, så du altid kan følge din ordre.<\/p><p>Du modtager Track & Trace-koden via e-mail inden for 24–72 timer efter, at du har afgivet din ordre.<\/p>","page":""}},"tab_JzPUha":{"type":"tab","settings":{"title":"10.327+ TILFREDSE KUNDER","content":"<p>Mikkel Sønder har over <strong>10.327+ <\/strong>glade kunder, og vores kunder vurderer os <strong>4.7\/5.0<\/strong><\/p>","page":""}},"custom_D8Tq3a":{"type":"custom","disabled":true,"settings":{"code":"<div style=\"display: flex; align-items: center; gap: 16px; margin: 24px 0;\">\n  <!-- Profielfoto -->\n  <div style=\"flex-shrink: 0;\">\n    <img src=\"\/\/charleston-boutique.us\/cdn\/shop\/files\/Zonder_titel_150_x_150_px_2_78fc3a68-e153-491d-9124-5a5d4596f915.png?v=1747835322&width=150\"\n         alt=\"Profile photo\"\n         width=\"70\"\n         height=\"70\"\n         style=\"border-radius: 20%; object-fit: cover; display: block;\">\n  <\/div>\n\n  <!-- Tekstblok -->\n  <div>\n    <p style=\"margin: 0; font-size: 14px; line-height: 1.5;\">\n     For 25 winters, 150,000 Canadian women have trusted Julie & Christine! \n    <\/p>\n  <\/div>\n<\/div>"}}},"block_order":["price","separator","custom_UcQEpm","sales_point_BpRnN7","sales_point_tPJpCR","sales_point_7HCqcT","variant_picker_pawatC","buy_buttons","custom_VtjdeG","separator_7kiXVA","custom_kw9ekc","custom_T7CQzw","custom_exrMhR","custom_cXH7ee","custom_wJQW4q","custom_9RG8XT","description","tab","tab_UA9LWb","tab_JzPUha","custom_D8Tq3a"],"custom_css":[".price,.product__price,.product__price span,.product__price .price-item {}","button.add-to-cart,button.product-form__submit {box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); \/* horizontaal, verticaal, blur, kleur *\/}"],"settings":{"sku_enable":false,"image_position":"left","image_size":"medium","product_zoom_enable":true,"thumbnail_position":"beside","thumbnail_arrows":false,"mobile_layout":"full","enable_video_looping":true,"product_video_style":"muted"}},"product-recommendations":{"type":"product-recommendations","disabled":true,"custom_css":["@media (min-width: 1200px) {.productgrid--item {width: 25% !important; }}","@media (max-width: 1199px) and(min-width:768px) {.productgrid--item {width: 33.33% !important; }}","@media (max-width: 767px) {.productgrid--item {width: 50% !important; }}",".swatches,.swatch,.product__swatches {display: none !important;}",".product-item__image {height: 400px; overflow: hidden;}",".product-item__image img {width: 100%; height: 100%; object-fit: cover;}"],"settings":{"show_product_recommendations":true,"product_recommendations_heading":"DU KUNNE OGSÅ VÆRE INTERESSERET I","related_count":5}},"featured_collection_nCdAHY":{"type":"featured-collection","custom_css":["@media (min-width: 1200px) {.productgrid--items .productgrid--item {width: 25% !important; }}","@media (max-width: 1199px) and(min-width:768px) {.productgrid--items .productgrid--item {width: 33.33% !important; }}","@media (max-width: 767px) {.productgrid--items .productgrid--item {width: 50% !important; }}",".swatches,.swatch,.product__swatches {display: none !important;}"],"name":"t:sections.featured-collection.presets.featured_collection.name","settings":{"title":"DU KUNNE OGSÅ VÆRE INTERESSERET I","home_featured_products":"herrestrik-sweatre","per_row":4,"rows":1,"mobile_scrollable":true,"view_all":false,"divider":false}},"testimonials_XxcfKn":{"type":"testimonials","blocks":{"testimonial_mdtqk3":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>I was a little worried about delays, but my package arrived in just 2 days. Super fast!<\/p>","author":"Ashley","author_info":"Canberra"}},"testimonial_G8jQAc":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>I'm always worried about choosing the wrong size, but I followed the size guide and it fit like a glove!<\/p>","author":"Madison","author_info":"Sydney"}},"testimonial_3Lt7EF":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>I have owned many so-called premium brands, but nothing compares to this. The materials and stitching are in a class of their own.<\/p>","author":"Ingrid S","author_info":"Brisbane"}},"testimonial_qQbbNz":{"type":"testimonial","settings":{"icon":"5-stars","testimonial":"<p>It feels like something made in an era when products were manufactured to last. Robust, stylish, and completely flawless.<\/p>","author":"Celeste","author_info":"Adelaide"}}},"block_order":["testimonial_mdtqk3","testimonial_G8jQAc","testimonial_3Lt7EF","testimonial_qQbbNz"],"settings":{"title":"Kind Words From Our Customers","align_text":"center","round_images":true,"color_background":"#f9f9f9","color_text":"#1c1d1d"}},"text_and_image_aGVpkd":{"type":"text-and-image","name":"t:sections.text-and-image.presets.image_with_text.name","settings":{"image_width":450,"subtitle":"","title":"","text":"<h2>30 dages pengene-tilbage-garanti<\/h2><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"left","divider":false}},"text_and_image_ikaDT8":{"type":"text-and-image","name":"t:sections.text-and-image.presets.image_with_text.name","settings":{"image":"shopify:\/\/shop_images\/WhatsApp_Image_2025-10-17_at_22.41.15_e40bf874-42fe-4bcf-ba37-be5b2cb7fd78.jpg","image_width":700,"subtitle":"","title":"","text":"<h1><strong>Our Promise to You<\/strong><\/h1><p>Every piece we design carries our promise of lasting quality and care.<\/p><p>If it doesn’t fit, doesn’t feel right, or simply isn’t what you expected, just send it back. No worries, no pressure. We want you to feel as confident wearing it as we did creating it.<\/p>","button_label":"","button_link":"","button_style":"primary","align_text":"left","layout":"right","divider":false}},"rich_text_RXQLAj":{"type":"rich-text","blocks":{"heading_cUp4Lh":{"type":"heading","settings":{"title":"Money back guarantee"}},"text_BGexWy":{"type":"text","settings":{"enlarge_text":true,"text":"<p>We love our products and we're sure you'll love them as much as we do! That's why we offer a risk-free <strong>30-day money-back guarantee<\/strong>. If you are not satisfied with our product, we will give you your money back.<\/p>"}}},"block_order":["heading_cUp4Lh","text_BGexWy"],"disabled":true,"name":"t:sections.rich-text.presets.rich_text.name","settings":{"align_text":"center","narrow_column":true,"divider":false}},"text_with_icons_wPbfMi":{"type":"text-with-icons","blocks":{"text_block_RXWcqR":{"type":"text_block","disabled":true,"settings":{"icon":"charity","title":"Handmade and designed","text":"<p>Each piece is carefully crafted with care, from the first sketch to the last stitch.<\/p>"}},"text_block_wkaK6N":{"type":"text_block","settings":{"icon":"truck","title":"","text":"<h1>Gratis levering<\/h1><p>Gratis levering på alle ordrer – uden minimumskøb! Shop nu og nyd en problemfri oplevelse<\/p>"}},"text_block_cEFaiq":{"type":"text_block","settings":{"icon":"shield","title":"","text":"<h1>30-dages garanti<\/h1><p>30-dages garanti – ikke helt tilfreds? Bare rolig! Du kan nemt returnere eller bytte dit køb inden for 30 dage. Din tilfredshed er vores højeste prioritet!<\/p>"}},"text_block_yppzcz":{"type":"text_block","disabled":true,"settings":{"icon":"chat","title":"Example title","text":"<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.<\/p>"}},"text_block_BiBh6J":{"type":"text_block","settings":{"icon":"chat","title":"","text":"<h1>Kundeservice<\/h1><p>Vores kundeservice er tilgængelig mandag til fredag fra kl. 9.00 til 18.00 og lørdag og søndag fra kl. 9.00 til 14.00.<\/p>"}}},"block_order":["text_block_RXWcqR","text_block_wkaK6N","text_block_cEFaiq","text_block_yppzcz","text_block_BiBh6J"],"settings":{"title":"","align_text":"center","desktop_columns_per_row":3,"icon_color":"#000000","button_label":"","button_link":"","divider":false}},"sub":{"type":"product-full-width","disabled":true,"settings":{"max_width":true}},"recently-viewed":{"type":"recently-viewed","disabled":true,"settings":{"recent_count":2}},"collection-return":{"type":"collection-return","disabled":true,"settings":{}},"loox-product-reviews-app-section":{"type":"apps","settings":{"full_width":false,"space_around":true}},"text_with_icons_mrAwQK":{"type":"text-with-icons","blocks":{"text_block_4dDgwQ":{"type":"text_block","settings":{"icon":"charity","title":"Håndlavet og designet","text":"<p>Hvert stykke er omhyggeligt udformet med omhu, fra den første skitse til den sidste søm<\/p>"}},"text_block_9xzkDk":{"type":"text_block","settings":{"icon":"truck","title":"Gratis forsendelse","text":"<p>I hele Danmark<\/p>"}},"text_block_FYaRUa":{"type":"text_block","settings":{"icon":"chat","title":"100% tilfredshedsgaranti","text":"<p>30 dages problemfri returret<\/p>"}},"text_block_jHWfBX":{"type":"text_block","disabled":true,"settings":{"icon":"chat","title":"24\/7 SUPPORT","text":"<p>Always here to help.<\/p>"}}},"block_order":["text_block_4dDgwQ","text_block_9xzkDk","text_block_FYaRUa","text_block_jHWfBX"],"disabled":true,"name":"Text columns with icons","settings":{"title":"","align_text":"center","desktop_columns_per_row":3,"icon_color":"#000000","button_label":"","button_link":"","divider":false}},"17538848277eff1985":{"type":"apps","settings":{"full_width":false,"space_around":true}},"1755202355895b91ca":{"type":"apps","settings":{"full_width":false,"space_around":true}},"17581361192fda889a":{"type":"apps","settings":{"full_width":false,"space_around":true}},"17581881847ec3a31d":{"type":"apps","settings":{"full_width":false,"space_around":true}},"1758229063d8509466":{"type":"apps","settings":{"full_width":false,"space_around":true}}},"order":["main","product-recommendations","featured_collection_nCdAHY","testimonials_XxcfKn","text_and_image_aGVpkd","text_and_image_ikaDT8","rich_text_RXQLAj","text_with_icons_wPbfMi","sub","recently-viewed","collection-return","loox-product-reviews-app-section","text_with_icons_mrAwQK","17538848277eff1985","1755202355895b91ca","17581361192fda889a","17581881847ec3a31d","1758229063d8509466"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "separator": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_UcQEpm": {
+          "type": "custom",
+          "settings": {
+            "code": "{%- assign badge_text = 'Sidste enheder på lager!' -%}\n\n<div class=\"usp-line usp-line--stock\">\n  <span class=\"usp-line__text\">{{ badge_text }}</span>\n</div>\n\n<style>\n  .usp-line {\n    display: flex;\n    align-items: center;\n    font-size: 1.05rem;\n    line-height: 1.3;\n    color: var(--color-foreground, #1a1a1a);\n    font-weight: 500;\n    margin: 0;                /* geen ruimte boven of onder */\n    margin-left: 2px;         /* lijn stip uit met icoontjes */\n  }\n\n  .usp-line--stock::before {\n    content: \"\";\n    display: inline-block;\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    background: #F5A623;\n    margin-right: .55rem;\n    flex: 0 0 10px;\n    position: relative;\n    top: -1px; /* optische correctie, precies in lijn met icoontjes */\n  }\n\n  .usp-line__text {\n    letter-spacing: .1px;\n  }\n</style>"
+          }
+        },
+        "sales_point_BpRnN7": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "truck",
+            "text": "Gratis PostNord forsendelse"
+          }
+        },
+        "sales_point_tPJpCR": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "shield",
+            "text": "30 Dages Pengene-tilbage-garanti"
+          }
+        },
+        "sales_point_7HCqcT": {
+          "type": "sales_point",
+          "settings": {
+            "icon": "ribbon",
+            "text": "Mere end 150.000 tilfredse kunder"
+          }
+        },
+        "variant_picker_pawatC": {
+          "type": "variant_picker",
+          "settings": {
+            "variant_labels": true,
+            "picker_type": "button",
+            "color_swatches": false
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "surface_pickup_enable": false
+          }
+        },
+        "custom_VtjdeG": {
+          "type": "custom",
+          "settings": {
+            "code": "{% if shop.enabled_payment_types %}\n<div class=\"payment-icons\">\n  {% for type in shop.enabled_payment_types %}\n    {{ type | payment_type_svg_tag }}\n  {% endfor %}\n</div>\n{% endif %}"
+          }
+        },
+        "separator_7kiXVA": {
+          "type": "separator",
+          "settings": {}
+        },
+        "custom_kw9ekc": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div class=\"product-block selluxe-shipping-row shipping-point_JhA92F\">\n  <style>\n    .shipping-point_JhA92F {\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n      padding: 10px 14px;\n      border: 1px solid #ddd;\n      border-radius: 4px;\n      margin-top: 16px;\n      font-size: 14px;\n    }\n    .shipping-point_JhA92F .icon {\n      width: 24px;\n      height: 24px;\n      position: relative;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      color: #279c58;\n    }\n    .shipping-point_JhA92F .icon .dot-icon {\n      position: absolute;\n    }\n    .shipping-point_JhA92F .icon .dot-animated {\n      animation: pulse-green 2s infinite;\n    }\n    @keyframes pulse-green {\n      from {\n        transform: scale(1);\n        opacity: 1;\n      }\n      to {\n        transform: scale(2.4);\n        opacity: 0;\n      }\n    }\n  </style>\n\n  <!-- Left side: Icon + Shipping Text -->\n  <div style=\"display: flex; align-items: center; gap: 8px;\">\n    <div class=\"icon\">\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"#279c58\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"dot-icon dot-animated\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle></svg>\n      <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"10\" height=\"10\" viewBox=\"0 0 24 24\" fill=\"#279c58\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"dot-icon\"><circle cx=\"12\" cy=\"12\" r=\"10\"></circle></svg>\n    </div>\n    <div class=\"text\">\n      <span>Ships on <strong id=\"shipping-date\"></strong></span>\n    </div>\n  </div>\n\n  <!-- Right side: Flag + Text -->\n  <div style=\"display: flex; align-items: center; gap: 6px;\">\n    <img src=\"{{ 'usa.webp' | asset_url }}\" alt=\"USA Flag\" style=\"height: 14px;\" />\n    <span><strong>Free Shipping</strong></span>\n  </div>\n</div>\n\n<script>\n  // Set shipping date dynamically to today\n  const dateEl = document.getElementById('shipping-date');\n  const shippingDate = new Date();\n\n  const options = { weekday: 'long', month: 'long', day: 'numeric' };\n  const formattedDate = shippingDate.toLocaleDateString('en-US', options);\n\n  dateEl.textContent = formattedDate;\n</script>"
+          }
+        },
+        "custom_T7CQzw": {
+          "type": "custom",
+          "settings": {
+            "code": ""
+          }
+        },
+        "custom_exrMhR": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"display: flex; justify-content: center;\">\n<div class=\"badgesContainer\" style=\"display: block; text-align: center;\"><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/mastercard_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/visa_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/americanexpress_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/applepay2_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/mobilepay_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/paypal_1_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div><div class=\"badgeContainer\" style=\"height: 44px; width: 44px; display: inline-block; position: relative;\"><img src=\"https://trust.conversionbear.com/../static/badges/klarna_color_card.svg\" class=\"imageContainer\" style=\"height: 80%; width: 80%; position: absolute; top: 50%; left: 50%; right: -50%; transform: translate(-50%, -50%);\"></div></div>\n</div>"
+          }
+        },
+        "custom_cXH7ee": {
+          "type": "custom",
+          "settings": {
+            "code": "<div class=\"bundle-offer-block\">\n  <p class=\"bundle-heading\">Tidligt Black Friday-udsalg:</p>\n  <ul class=\"bundle-tiers\">\n    <li><strong>Køb 2</strong> → Spar 10 % ekstra</li>\n    <li><strong>Køb 3</strong> → Spar 15 % ekstra</li>\n    <li><strong>Køb 4</strong> → <span>Spar 20 % ekstra</span></li>\n <li class=\"highlight-tier\"><strong>Køb 5</strong> → <span>Spar 25 % ekstra</span></li>\n  </ul>\n  <p class=\"bundle-note\">\n    <span class=\"urgent-text\">LAGERET SÆLGER HURTIGT:</span> MEN STADIG TILGÆNGELIGT, HVIS DU KAN LÆGGE DET I KURVEN\n  </p>\n</div>"
+          }
+        },
+        "custom_wJQW4q": {
+          "type": "custom",
+          "settings": {
+            "code": "<div style=\"border: 1px solid #FFAAAA; padding: 10px 15px; background-color: #fee6e6; border-radius: 0px; margin-top: 20px; font-family: inherit; color: #C30000; line-height: 1.4; text-align: left;\">\n                            <p style=\"margin: 0; font-size: 16px;\">\n                              <span style=\"color: #C30000; font-weight: bold;\">Tidligt Black Friday-udsalg:</span> På grund af stor\nefterspørgsel under vores jubilæumssalg er der kun et begrænset antal enheder tilbage! Hvis du stadig kan\nklikke på »Tilføj til kurv«, er den stadig tilgængelig.\n                            </p>\n</div>"
+          }
+        },
+        "custom_9RG8XT": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"display: flex; align-items: center; gap: 16px; margin: 24px 0;\">\n  <!-- Profielfoto -->\n  <div style=\"flex-shrink: 0;\">\n    <img src=\"//charleston-boutique.us/cdn/shop/files/Zonder_titel_150_x_150_px_2_78fc3a68-e153-491d-9124-5a5d4596f915.png?v=1747835322&width=150\"\n         alt=\"Profile photo\"\n         width=\"70\"\n         height=\"70\"\n         style=\"border-radius: 20%; object-fit: cover; display: block;\">\n  </div>\n\n  <!-- Tekstblok -->\n  <div>\n    <p style=\"margin: 0; font-size: 14px; line-height: 1.5;\">\n      Over 17,000 women across the U.S. trust Beatrice Boutique for timeless comfort and style.\n    </p>\n  </div>\n</div>"
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "is_tab": false
+          }
+        },
+        "tab": {
+          "type": "tab",
+          "settings": {
+            "title": "100% RETURGARANTI",
+            "content": "<p>Vi tilbyder <strong>30 dages returret</strong>, så du kan returnere din ordre inden for 30 dage efter modtagelsen og få alle pengene tilbage.</p>",
+            "page": ""
+          }
+        },
+        "tab_UA9LWb": {
+          "type": "tab",
+          "settings": {
+            "title": "GRATIS LEVERING",
+            "content": "<p>Vi tilbyder gratis levering i Danmark på alle ordrer.</p><p>Vi sender alle pakker med en Track & Trace-kode, så du altid kan følge din ordre.</p><p>Du modtager Track & Trace-koden via e-mail inden for 24–72 timer efter, at du har afgivet din ordre.</p>",
+            "page": ""
+          }
+        },
+        "tab_JzPUha": {
+          "type": "tab",
+          "settings": {
+            "title": "10.327+ TILFREDSE KUNDER",
+            "content": "<p>Mikkel Sønder har over <strong>10.327+ </strong>glade kunder, og vores kunder vurderer os <strong>4.7/5.0</strong></p>",
+            "page": ""
+          }
+        },
+        "custom_D8Tq3a": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "code": "<div style=\"display: flex; align-items: center; gap: 16px; margin: 24px 0;\">\n  <!-- Profielfoto -->\n  <div style=\"flex-shrink: 0;\">\n    <img src=\"//charleston-boutique.us/cdn/shop/files/Zonder_titel_150_x_150_px_2_78fc3a68-e153-491d-9124-5a5d4596f915.png?v=1747835322&width=150\"\n         alt=\"Profile photo\"\n         width=\"70\"\n         height=\"70\"\n         style=\"border-radius: 20%; object-fit: cover; display: block;\">\n  </div>\n\n  <!-- Tekstblok -->\n  <div>\n    <p style=\"margin: 0; font-size: 14px; line-height: 1.5;\">\n     For 25 winters, 150,000 Canadian women have trusted Julie & Christine! \n    </p>\n  </div>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "price",
+        "separator",
+        "custom_UcQEpm",
+        "sales_point_BpRnN7",
+        "sales_point_tPJpCR",
+        "sales_point_7HCqcT",
+        "variant_picker_pawatC",
+        "buy_buttons",
+        "custom_VtjdeG",
+        "separator_7kiXVA",
+        "custom_kw9ekc",
+        "custom_T7CQzw",
+        "custom_exrMhR",
+        "custom_cXH7ee",
+        "custom_wJQW4q",
+        "custom_9RG8XT",
+        "description",
+        "tab",
+        "tab_UA9LWb",
+        "tab_JzPUha",
+        "custom_D8Tq3a"
+      ],
+      "custom_css": [
+        ".price,.product__price,.product__price span,.product__price .price-item {}",
+        "button.add-to-cart,button.product-form__submit {box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* horizontaal, verticaal, blur, kleur */}"
+      ],
+      "settings": {
+        "sku_enable": false,
+        "image_position": "left",
+        "image_size": "medium",
+        "product_zoom_enable": true,
+        "thumbnail_position": "beside",
+        "thumbnail_arrows": false,
+        "mobile_layout": "full",
+        "enable_video_looping": true,
+        "product_video_style": "muted"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "custom_css": [
+        "@media (min-width: 1200px) {.productgrid--item {width: 25% !important; }}",
+        "@media (max-width: 1199px) and(min-width:768px) {.productgrid--item {width: 33.33% !important; }}",
+        "@media (max-width: 767px) {.productgrid--item {width: 50% !important; }}",
+        ".swatches,.swatch,.product__swatches {display: none !important;}",
+        ".product-item__image {height: 400px; overflow: hidden;}",
+        ".product-item__image img {width: 100%; height: 100%; object-fit: cover;}"
+      ],
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_heading": "DU KUNNE OGSÅ VÆRE INTERESSERET I",
+        "related_count": 5
+      }
+    },
+    "featured_collection_nCdAHY": {
+      "type": "featured-collection",
+      "custom_css": [
+        "@media (min-width: 1200px) {.productgrid--items .productgrid--item {width: 25% !important; }}",
+        "@media (max-width: 1199px) and(min-width:768px) {.productgrid--items .productgrid--item {width: 33.33% !important; }}",
+        "@media (max-width: 767px) {.productgrid--items .productgrid--item {width: 50% !important; }}",
+        ".swatches,.swatch,.product__swatches {display: none !important;}"
+      ],
+      "name": "t:sections.featured-collection.presets.featured_collection.name",
+      "settings": {
+        "title": "DU KUNNE OGSÅ VÆRE INTERESSERET I",
+        "home_featured_products": "herrestrik-sweatre",
+        "per_row": 4,
+        "rows": 1,
+        "mobile_scrollable": true,
+        "view_all": false,
+        "divider": false
+      }
+    },
+    "testimonials_XxcfKn": {
+      "type": "testimonials",
+      "blocks": {
+        "testimonial_mdtqk3": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Jeg havde den på til en fernisering, og tre kvinder spurgte mig, hvor jeg havde den fra. Den er dristig uden at skrige. Jeg elsker, hvordan den balancerer mellem kant og elegance – jeg føler mig helt som mig selv i den.\"</p>",
+            "author": "Ida R.",
+            "author_info": "Odense, Danmark"
+          }
+        },
+        "testimonial_G8jQAc": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Jeg tog den bare på og følte mig straks mere cool. Det er den slags, der får dit outfit til at se lækkert ud, selv når du er sent på den. Jeg har den på igen og igen.\"</p>",
+            "author": "Nora T.",
+            "author_info": "Aalborg, Danmark"
+          }
+        },
+        "testimonial_3Lt7EF": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"Jeg har brugt mange år på at sammensætte en garderobe, der afspejler, hvem jeg er - rolig, jordbunden og bevidst. Disse stykker gled naturligt ind. Underspillet skønhed, upåklageligt håndværk. Ikke noget larmende. Bare det rigtige.\"</p>",
+            "author": "Lene V.",
+            "author_info": "Skagen, Danmark"
+          }
+        },
+        "testimonial_qQbbNz": {
+          "type": "testimonial",
+          "settings": {
+            "icon": "5-stars",
+            "testimonial": "<p>\"De bløde linjer og det flydende stof fik mig til at føle, at jeg gik gennem en drøm. Det er sjældent at finde tøj, der føles så smukt og stadig ser så poleret ud.\"</p>",
+            "author": "Amalie S.",
+            "author_info": "Aarhus, Denmark"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_mdtqk3",
+        "testimonial_G8jQAc",
+        "testimonial_3Lt7EF",
+        "testimonial_qQbbNz"
+      ],
+      "settings": {
+        "title": "Kind Words From Our Customers",
+        "align_text": "center",
+        "round_images": true,
+        "color_background": "#f9f9f9",
+        "color_text": "#1c1d1d"
+      }
+    },
+    "text_and_image_aGVpkd": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image_width": 450,
+        "subtitle": "",
+        "title": "",
+        "text": "<h2>30 dages pengene-tilbage-garanti</h2><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "left",
+        "divider": false
+      }
+    },
+    "text_and_image_ikaDT8": {
+      "type": "text-and-image",
+      "disabled": true,
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/WhatsApp_Image_2025-10-17_at_22.41.15_e40bf874-42fe-4bcf-ba37-be5b2cb7fd78.jpg",
+        "image_width": 700,
+        "subtitle": "",
+        "title": "",
+        "text": "<h1><strong>Our Promise to You</strong></h1><p>Every piece we design carries our promise of lasting quality and care.</p><p>If it doesn’t fit, doesn’t feel right, or simply isn’t what you expected, just send it back. No worries, no pressure. We want you to feel as confident wearing it as we did creating it.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
+    "rich_text_RXQLAj": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_cUp4Lh": {
+          "type": "heading",
+          "settings": {
+            "title": "Money back guarantee"
+          }
+        },
+        "text_BGexWy": {
+          "type": "text",
+          "settings": {
+            "enlarge_text": true,
+            "text": "<p>We love our products and we're sure you'll love them as much as we do! That's why we offer a risk-free <strong>30-day money-back guarantee</strong>. If you are not satisfied with our product, we will give you your money back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_cUp4Lh",
+        "text_BGexWy"
+      ],
+      "disabled": true,
+      "name": "t:sections.rich-text.presets.rich_text.name",
+      "settings": {
+        "align_text": "center",
+        "narrow_column": true,
+        "divider": false
+      }
+    },
+    "text_with_icons_wPbfMi": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_RXWcqR": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "icon": "charity",
+            "title": "Handmade and designed",
+            "text": "<p>Each piece is carefully crafted with care, from the first sketch to the last stitch.</p>"
+          }
+        },
+        "text_block_wkaK6N": {
+          "type": "text_block",
+          "settings": {
+            "icon": "truck",
+            "title": "",
+            "text": "<h1>Gratis levering</h1><p>Gratis levering på alle ordrer – uden minimumskøb! Shop nu og nyd en problemfri oplevelse</p>"
+          }
+        },
+        "text_block_cEFaiq": {
+          "type": "text_block",
+          "settings": {
+            "icon": "shield",
+            "title": "",
+            "text": "<h1>30-dages garanti</h1><p>30-dages garanti – ikke helt tilfreds? Bare rolig! Du kan nemt returnere eller bytte dit køb inden for 30 dage. Din tilfredshed er vores højeste prioritet!</p>"
+          }
+        },
+        "text_block_yppzcz": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "icon": "chat",
+            "title": "Example title",
+            "text": "<p>Use this section to explain a set of product features, to link to a series of pages, or to answer common questions about your products.</p>"
+          }
+        },
+        "text_block_BiBh6J": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "",
+            "text": "<h1>Kundeservice</h1><p>Vores kundeservice er tilgængelig mandag til fredag fra kl. 9.00 til 18.00 og lørdag og søndag fra kl. 9.00 til 14.00.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_RXWcqR",
+        "text_block_wkaK6N",
+        "text_block_cEFaiq",
+        "text_block_yppzcz",
+        "text_block_BiBh6J"
+      ],
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "sub": {
+      "type": "product-full-width",
+      "disabled": true,
+      "settings": {
+        "max_width": true
+      }
+    },
+    "recently-viewed": {
+      "type": "recently-viewed",
+      "disabled": true,
+      "settings": {
+        "recent_count": 2
+      }
+    },
+    "collection-return": {
+      "type": "collection-return",
+      "disabled": true,
+      "settings": {}
+    },
+    "loox-product-reviews-app-section": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "text_with_icons_mrAwQK": {
+      "type": "text-with-icons",
+      "blocks": {
+        "text_block_4dDgwQ": {
+          "type": "text_block",
+          "settings": {
+            "icon": "charity",
+            "title": "Håndlavet og designet",
+            "text": "<p>Hvert stykke er omhyggeligt udformet med omhu, fra den første skitse til den sidste søm</p>"
+          }
+        },
+        "text_block_9xzkDk": {
+          "type": "text_block",
+          "settings": {
+            "icon": "truck",
+            "title": "Gratis forsendelse",
+            "text": "<p>I hele Danmark</p>"
+          }
+        },
+        "text_block_FYaRUa": {
+          "type": "text_block",
+          "settings": {
+            "icon": "chat",
+            "title": "100% tilfredshedsgaranti",
+            "text": "<p>30 dages problemfri returret</p>"
+          }
+        },
+        "text_block_jHWfBX": {
+          "type": "text_block",
+          "disabled": true,
+          "settings": {
+            "icon": "chat",
+            "title": "24/7 SUPPORT",
+            "text": "<p>Always here to help.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_4dDgwQ",
+        "text_block_9xzkDk",
+        "text_block_FYaRUa",
+        "text_block_jHWfBX"
+      ],
+      "disabled": true,
+      "name": "Text columns with icons",
+      "settings": {
+        "title": "",
+        "align_text": "center",
+        "desktop_columns_per_row": 3,
+        "icon_color": "#000000",
+        "button_label": "",
+        "button_link": "",
+        "divider": false
+      }
+    },
+    "17538848277eff1985": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1755202355895b91ca": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "17581361192fda889a": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "17581881847ec3a31d": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    },
+    "1758229063d8509466": {
+      "type": "apps",
+      "settings": {
+        "full_width": false,
+        "space_around": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "featured_collection_nCdAHY",
+    "testimonials_XxcfKn",
+    "text_and_image_aGVpkd",
+    "text_and_image_ikaDT8",
+    "rich_text_RXQLAj",
+    "text_with_icons_wPbfMi",
+    "sub",
+    "recently-viewed",
+    "collection-return",
+    "loox-product-reviews-app-section",
+    "text_with_icons_mrAwQK",
+    "17538848277eff1985",
+    "1755202355895b91ca",
+    "17581361192fda889a",
+    "17581881847ec3a31d",
+    "1758229063d8509466"
+  ]
+}
