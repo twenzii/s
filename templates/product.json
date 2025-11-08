@@ -205,6 +205,23 @@
         "related_count": 5
       }
     },
+    "text_and_image_aGVpkd": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_c4br7zc4br7zc4br.png",
+        "image_width": 450,
+        "subtitle": "",
+        "title": "",
+        "text": "<h1><strong>30 dages pengene-tilbage-garanti</strong></h1><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
+        "divider": false
+      }
+    },
     "featured_collection_nCdAHY": {
       "type": "featured-collection",
       "custom_css": [
@@ -271,27 +288,62 @@
         "testimonial_qQbbNz"
       ],
       "settings": {
-        "title": "Kind Words From Our Customers",
+        "title": "HVAD VORES KUNDER SIGER",
         "align_text": "center",
         "round_images": true,
         "color_background": "#f9f9f9",
         "color_text": "#1c1d1d"
       }
     },
-    "text_and_image_aGVpkd": {
-      "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
+    "faq_xDHidN": {
+      "type": "faq",
+      "blocks": {
+        "question_YcKjWb": {
+          "type": "question",
+          "settings": {
+            "title": "Hvordan kan jeg spore min ordre?",
+            "text": "<p>Når din ordre er bekræftet, modtager du en e-mail med dit ordrenummer.<br/>For at spore din ordre skal du blot besøge vores side til <a href=\"/pages/contact\" target=\"_blank\" title=\"Contact\">ordretracking </a>og indtaste dit ordrenummer eller din e-mailadresse.<br/></p>"
+          }
+        },
+        "question_fxDmpm": {
+          "type": "question",
+          "settings": {
+            "title": "Hvad er leveringstiden?",
+            "text": "<p>Den gennemsnitlige leveringstid er<br/>7-12 hverdage. Bemærk venligst, at der kan forekomme forsinkelser på grund af<br/>høj efterspørgsel eller transportforhold.</p>"
+          }
+        },
+        "question_b9FPPp": {
+          "type": "question",
+          "settings": {
+            "title": "Hvordan returnerer jeg en vare?",
+            "text": "<p>Du kan returnere varer inden for 30 kalenderdage efter modtagelsen.</p><p>Omkostninger til returforsendelse er købers ansvar.<br/>Godkendte refunderinger vil blive tilbagebetalt til din oprindelige betalingsmetode.<br/>For mere information, læs venligst vores <a href=\"/pages/return-policy\" target=\"_blank\" title=\"Return Policy\">returpolitik</a>.</p>"
+          }
+        },
+        "question_tPEkMf": {
+          "type": "question",
+          "settings": {
+            "title": "Er der undtagelser fra returpolitikken?",
+            "text": "<p>Ja, følgende undtagelser gælder: Delvise refunderinger kan blive udstedt for varer, der:</p><ul><li>Viser tegn på brug</li><li>Ikke er i deres oprindelige stand</li><li>Er beskadigede eller mangler dele (som ikke er forårsaget af os)</li><li>Returneres mere end 30 dage efter levering</li></ul><p>For alle detaljer, henvises der til vores returpolitik.</p>"
+          }
+        },
+        "question_E4BmRM": {
+          "type": "question",
+          "settings": {
+            "title": "Hvordan kontakter jeg kundeservice?",
+            "text": "<p>Hvis du oplever problemer eller har spørgsmål, så besøg venligst vores <a href=\"/pages/contact\" title=\"Contact\">kontaktside </a>for at komme i kontakt med vores supportteam.<br/><br/>Vi står klar til at hjælpe dig hurtigt og effektivt.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "question_YcKjWb",
+        "question_fxDmpm",
+        "question_b9FPPp",
+        "question_tPEkMf",
+        "question_E4BmRM"
+      ],
+      "name": "t:sections.faq.presets.faq.name",
       "settings": {
-        "image_width": 450,
-        "subtitle": "",
-        "title": "",
-        "text": "<h2>30 dages pengene-tilbage-garanti</h2><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "left",
-        "divider": false
+        "title": "FAQs"
       }
     },
     "text_and_image_ikaDT8": {
@@ -525,8 +577,9 @@
     "main",
     "product-recommendations",
     "featured_collection_nCdAHY",
-    "testimonials_XxcfKn",
     "text_and_image_aGVpkd",
+    "testimonials_XxcfKn",
+    "faq_xDHidN",
     "text_and_image_ikaDT8",
     "rich_text_RXQLAj",
     "text_with_icons_wPbfMi",
