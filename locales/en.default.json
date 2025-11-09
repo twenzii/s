@@ -306,8 +306,8 @@
       "color_swatch_trigger": "Color",
       "size_trigger": "Size",
       "size_chart": "Size chart",
-      "save_html": "Spar {{ saved_amount | money_without_trailing_zeros }}",
-"save_percent": "Spar {{ saved_amount | money_without_trailing_zeros }}",
+      "save_html": "Spar {{ saved_amount }} kr",
+      "save_percent": "Spar {{ saved_amount }} kr",
 
       "collection_return": "Back to {{ collection }}",
       "next_product": "Next: {{ title }}",
