@@ -225,8 +225,10 @@
                           {% assign discount = product.compare_at_price | minus: product.price %}
                           {% assign discount_percent = discount | times: 100.0 | divided_by: product.compare_at_price | round %}
 
-                          <div style="background-color: #c12626; color: #ffffff; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: ; display: inline-block; margin-left: 5px;">
-                            SAVE {{ discount_percent }}%
+                          <div style="background-color: #48A478; color: #ffffff; font-size: 13px; font-weight: 600; padding: 6px 10px; border-radius: 4px; display: inline-block; margin-left: 5px;">
+                              Spar {{ discount | money }}
+                          </div>
+
                           </div>
                         </div>
                         {% endif %}
