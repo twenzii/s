@@ -95,13 +95,13 @@
         "custom_cXH7ee": {
           "type": "custom",
           "settings": {
-            "code": "<div class=\"bundle-offer-block\">\n  <p class=\"bundle-heading\">Tidligt Black Friday-udsalg:</p>\n  <ul class=\"bundle-tiers\">\n    <li><strong>Køb 2</strong> → Spar 10 % ekstra</li>\n    <li><strong>Køb 3</strong> → Spar 15 % ekstra</li>\n    <li><strong>Køb 4</strong> → <span>Spar 20 % ekstra</span></li>\n <li class=\"highlight-tier\"><strong>Køb 5</strong> → <span>Spar 25 % ekstra</span></li>\n  </ul>\n  <p class=\"bundle-note\">\n    <span class=\"urgent-text\">LAGERET SÆLGER HURTIGT:</span> MEN STADIG TILGÆNGELIGT, HVIS DU KAN LÆGGE DET I KURVEN\n  </p>\n</div>"
+            "code": "<div class=\"bundle-offer-block\">\n  <p class=\"bundle-heading\">jubilæumssalg-udsalg:</p>\n  <ul class=\"bundle-tiers\">\n    <li><strong>Køb 2</strong> → Spar 10 % ekstra</li>\n    <li><strong>Køb 3</strong> → Spar 15 % ekstra</li>\n    <li><strong>Køb 4</strong> → <span>Spar 20 % ekstra</span></li>\n <li class=\"highlight-tier\"><strong>Køb 5</strong> → <span>Spar 25 % ekstra</span></li>\n  </ul>\n  <p class=\"bundle-note\">\n    <span class=\"urgent-text\">LAGERET SÆLGER HURTIGT:</span> MEN STADIG TILGÆNGELIGT, HVIS DU KAN LÆGGE DET I KURVEN\n  </p>\n</div>"
           }
         },
         "custom_wJQW4q": {
           "type": "custom",
           "settings": {
-            "code": "<div style=\"border: 1px solid #FFAAAA; padding: 10px 15px; background-color: #fee6e6; border-radius: 0px; margin-top: 20px; font-family: inherit; color: #C30000; line-height: 1.4; text-align: left;\">\n                            <p style=\"margin: 0; font-size: 16px;\">\n                              <span style=\"color: #C30000; font-weight: bold;\">Tidligt Black Friday-udsalg:</span> På grund af stor\nefterspørgsel under vores jubilæumssalg er der kun et begrænset antal enheder tilbage! Hvis du stadig kan\nklikke på »Tilføj til kurv«, er den stadig tilgængelig.\n                            </p>\n</div>"
+            "code": "<div style=\"border: 1px solid #FFAAAA; padding: 10px 15px; background-color: #fee6e6; border-radius: 0px; margin-top: 20px; font-family: inherit; color: #C30000; line-height: 1.4; text-align: left;\">\n                            <p style=\"margin: 0; font-size: 16px;\">\n                              <span style=\"color: #C30000; font-weight: bold;\">Opdatering af jubilæumssalg:</span> På grund af stor\nefterspørgsel under vores jubilæumssalg er der kun et begrænset antal enheder tilbage! Hvis du stadig kan\nklikke på »Tilføj til kurv«, er den stadig tilgængelig.\n                            </p>\n</div>"
           }
         },
         "custom_9RG8XT": {
@@ -205,23 +205,6 @@
         "related_count": 5
       }
     },
-    "text_and_image_aGVpkd": {
-      "type": "text-and-image",
-      "name": "t:sections.text-and-image.presets.image_with_text.name",
-      "settings": {
-        "image": "shopify://shop_images/Gemini_Generated_Image_c4br7zc4br7zc4br.png",
-        "image_width": 450,
-        "subtitle": "",
-        "title": "",
-        "text": "<h1><strong>30 dages pengene-tilbage-garanti</strong></h1><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.</p>",
-        "button_label": "",
-        "button_link": "",
-        "button_style": "primary",
-        "align_text": "left",
-        "layout": "right",
-        "divider": false
-      }
-    },
     "featured_collection_nCdAHY": {
       "type": "featured-collection",
       "custom_css": [
@@ -238,6 +221,23 @@
         "rows": 1,
         "mobile_scrollable": true,
         "view_all": false,
+        "divider": false
+      }
+    },
+    "text_and_image_aGVpkd": {
+      "type": "text-and-image",
+      "name": "t:sections.text-and-image.presets.image_with_text.name",
+      "settings": {
+        "image": "shopify://shop_images/Gemini_Generated_Image_c4br7zc4br7zc4br.png",
+        "image_width": 450,
+        "subtitle": "",
+        "title": "",
+        "text": "<h1><strong>30 dages pengene-tilbage-garanti</strong></h1><p>Vi elsker vores produkter, og vi er overbeviste om, at du også vil synes, de er fantastiske! Derfor tilbyder vi en risikofri prøveperiode på 30 dage. Hvis du ikke er tilfreds, får du dine penge tilbage.</p>",
+        "button_label": "",
+        "button_link": "",
+        "button_style": "primary",
+        "align_text": "left",
+        "layout": "right",
         "divider": false
       }
     },
